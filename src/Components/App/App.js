@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Navbar from "../nav/Navbar";
+import Navbar from "../Nav/Navbar";
 import SearchBar from "../Search/SearchBar";
 import Results from "../Results/Results";
 import Modal from "../Modal/Modal";

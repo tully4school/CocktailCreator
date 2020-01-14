@@ -49,7 +49,7 @@ class MainNavbar extends Component {
 									to={`/categories/${item}`}
 									data={this.filteredData}
 								>
-									<NavDropdown.Item componentClass={Link}>
+									<NavDropdown.Item>
 										{item}
 									</NavDropdown.Item>
 								</LinkContainer>

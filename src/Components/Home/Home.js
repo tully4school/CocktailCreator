@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import "./Home.css";
-import HomeHeader from "../images/HomeHeader";
+import HomeHeader from "../Images/HomeHeader";
 import Carousel from "../Carousel/Carousel";
-import MultiCarousel from "../MultiCarousel/MultiCarousel";
 class Home extends Component {
     constructor(props) {
         super(props);
