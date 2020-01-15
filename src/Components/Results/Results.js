@@ -8,12 +8,12 @@ class Results extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			resultData: this.props.location.state
+			resultData: this.props.location.state.results
 		};
 	}
 	componentWillReceiveProps(nextProps) {
 		this.setState({
-			resultData: nextProps.location.state
+			resultData: nextProps.location.state.results
 		});
 	}
 	render() {

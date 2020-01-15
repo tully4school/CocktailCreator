@@ -28,6 +28,9 @@ nav .bg-light {
     	left: 1.8rem !important;
    		 top: .9rem !important;
 	}
+	.navbar-collapse .searchbar {
+		display: none;
+	}
 
 }
 @media only screen and (max-device-width: 520px){

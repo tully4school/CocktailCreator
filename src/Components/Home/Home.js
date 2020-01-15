@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Home.css";
-import HomeHeader from "../Images/HomeHeader";
+import SearchBar from "../Search/SearchBar";
 import Carousel from "../Carousel/Carousel";
 class Home extends Component {
     constructor(props) {
@@ -15,8 +15,8 @@ class Home extends Component {
         return (
             <div>
                 <div className='row'>
-                    <div className='d-none col-md-12'>
-                        <HomeHeader />
+                    <div className='col-12 d-lg-none mt-5'>
+                        <SearchBar />
                     </div>
                 </div>
                 <div className='row mt-5 mb-3 carousel-row'>

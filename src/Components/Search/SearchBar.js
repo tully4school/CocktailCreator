@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import "./Searchbar.css";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import faStyles from "font-awesome/css/font-awesome.css";
-// import { library } from "@fortawesome/fontawesome-svg-core";
-// import { faHamburger, faPizzaSlice } from "@fortawesome/free-solid-svg-icons";
-// library.add(faHamburger, faPizzaSlice);
+
 
 class Searchbar extends Component {
 	constructor(props) {
@@ -54,7 +50,7 @@ class Searchbar extends Component {
 		const { drinkName } = this.state;
 
 		return (
-			<div className='searchbar d-none d-md-flex' onSubmit={this.handleSubmit}>
+			<div className='searchbar' onSubmit={this.handleSubmit}>
 				<form>
 					<input
 						placeholder='Name of Drink'
