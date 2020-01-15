@@ -36,41 +36,43 @@ class App extends Component {
   render() {
     console.log(this.state.data);
     return (
-      <div className='main-container'>
-        <nav>
-          <Navbar data={this.state.data} />
-        </nav>
-        <main className='p-0'>
-          <Route
-            path='/'
-            exact
-            render={() => <Home data={this.state.data} />}
-          />
-          <Route
-            path='/drinks'
-            render={() => <Drinks data={this.state.data} />}
-          />
-          <Route
-            path='/search'
-            render={() => <SearchBar data={this.state.data} />}
-          />
-          <Route path='/results' component={Results} />
-          <Route
-            path='/categories'
-            exact
-            render={() => <Categories data={this.state.data} />}
-          />
-          <Route
-            path='/modal'
-            render={() => <Modal data={this.state.data} />}
-          />
-          <Route path='/add' component={AddDrink} />
-          <Route path='/update' component={UpdateDrink} />
-          <Route path='/delete' component={DeleteDrink} />
-          <Route path='/about' component={About} />
-          <Route path='/categories/:drinkCategory' exact component={Category} />
-          <Route path='/contact' component={Contact} />
-        </main>
+      <div className="container-fluid">
+        <div className='main-container'>
+          <nav>
+            <Navbar data={this.state.data} />
+          </nav>
+          <main className='p-0'>
+            <Route
+              path='/'
+              exact
+              render={() => <Home data={this.state.data} />}
+            />
+            <Route
+              path='/drinks'
+              render={() => <Drinks data={this.state.data} />}
+            />
+            <Route
+              path='/search'
+              render={() => <SearchBar data={this.state.data} />}
+            />
+            <Route path='/results' component={Results} />
+            <Route
+              path='/categories'
+              exact
+              render={() => <Categories data={this.state.data} />}
+            />
+            <Route
+              path='/modal'
+              render={() => <Modal data={this.state.data} />}
+            />
+            <Route path='/add' component={AddDrink} />
+            <Route path='/update' component={UpdateDrink} />
+            <Route path='/delete' component={DeleteDrink} />
+            <Route path='/about' component={About} />
+            <Route path='/categories/:drinkCategory' exact component={Category} />
+            <Route path='/contact' component={Contact} />
+          </main>
+        </div>
       </div>
     );
   }
