@@ -6,6 +6,9 @@
 	color: #000 !important;
 	display: block;
 }
+.modal-header {
+	border-bottom: none !important;
+}
 .modal-content {
 	max-width: 50%;
 	min-width: 620px;
@@ -13,8 +16,7 @@
 }
 .modal-content,
 .modal-content .close {
-	background-color: #000;
-	color: #000;
+	background: none;
 }
 .modal-header,
 .modal-footer {
@@ -27,6 +29,7 @@
 .modal-footer {
 	font-size: 2rem;
 	font-weight: 500;
+	border-top: none !important;
 }
 .modal-footer ul li li {
 	list-style: none;

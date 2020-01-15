@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Ingredients from "../Ingredients/Ingredients";
+import Modal from "../Modal/Modal"
 import Measures from "../Ingredients/Measures";
 import "./Results.css";
 import "../Categories/Category.css";
@@ -19,13 +20,20 @@ class Results extends Component {
 	render() {
 		return (
 			<div>
-				<h1>Drinks Served!</h1>
+				<h1 className='crud-create-header display-4 my-5 text-center'>
+					Drinks Served!</h1>
 				{this.state.resultData.map(drink => (
-					<div className='category-drinks' key={drink._id}>
-						<h2>{drink.drinkName}</h2>
-						<img src={drink.drinkThumb} alt={drink.drinkName} />
-
-						<ul className='categoryData'>
+					<Modal
+						name={drink.drinkName}
+						img={
+							<img
+								src={drink.drinkThumb}
+								className='modal-img'
+								alt={drink.drinkName}
+							/>
+						}
+						src={drink.drinkThumb}
+						details={<ul>
 							<li>Alcohol:{" " + drink.alcohol}</li>
 							<li>Served in:{" " + drink.drinkGlass}</li>
 							<li>
@@ -37,8 +45,7 @@ class Results extends Component {
 							<li>
 								Measures: <Measures data={drink.drinkMeasures} />
 							</li>
-						</ul>
-					</div>
+						</ul>} />
 				))}
 			</div>
 		);
