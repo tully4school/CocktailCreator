@@ -24,21 +24,24 @@ class HomeCarousel extends Component {
 			<Carousel className='mb-5'>
 				{newDrinks.map(item => (
 					<Carousel.Item>
+
 						<div
 							className='carousel-background d-none d-md-flex'
 							style={{
 								backgroundImage: `url(${item.drinkThumb})`
 							}}
 						></div>
-						<img
-							className='carousel-img img-fluid d-flex align-items-center mt-md-3 w-sm-100'
-							src={item.drinkThumb}
-							alt='First slide'
-						/>
-						<Carousel.Caption>
-							<h3>{item.drinkName}</h3>
-							<p>{item.drinkIngredients}</p>
-						</Carousel.Caption>
+						<div className="col-lg-12">
+							<img
+								className='carousel-img img-fluid d-flex align-items-center mt-md-3 w-sm-100'
+								src={item.drinkThumb}
+								alt='First slide'
+							/>
+							<Carousel.Caption className="d-fluid">
+								<h3>{item.drinkName}</h3>
+								<p>{item.drinkIngredients}</p>
+							</Carousel.Caption>
+						</div>
 					</Carousel.Item>
 				))}
 			</Carousel>

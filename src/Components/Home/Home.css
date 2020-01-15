@@ -3,13 +3,13 @@
 }
 
 @media only screen and (max-device-width: 991px) {
-	.searchbar {
-		display: flex;
-		justify-content: center;
+.searchbar {
+	display: flex;
+	justify-content: center;
+	width: 80% !important;
 	}
 .searchbar input,
 .searchbar button {
-	height: 5vw !important;
 	min-height: 3.26rem;
 	font-size: 2rem;
 	display: flex;

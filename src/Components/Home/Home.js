@@ -15,7 +15,7 @@ class Home extends Component {
         return (
             <>
                 <div className='row'>
-                    <div className='col-12 d-lg-none mt-5'>
+                    <div className='d-flex col-12 d-lg-none mt-5 justify-content-center'>
                         <SearchBar />
                     </div>
                 </div>

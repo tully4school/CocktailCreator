@@ -1,16 +1,12 @@
 
-@media only screen and (min-device-width: 920px) {
+@media only screen and (min-width: 920px) {
 .searchbar form {
-	width: 20vw;
 	font-size: 1vw !important;
+		border-right: none;
 }
 .searchbar input,
 .searchbar button {
 	min-height: 2.7vw;
-}
-.searchbar form {
-	border-right: none;
-	width: 21.6vw !important;
 }
 .searchbar button {
 	border: none;
