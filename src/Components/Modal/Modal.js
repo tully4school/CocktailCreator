@@ -24,7 +24,7 @@ function DrinkModal(props) {
 				aria-labelledby='example-custom-modal-styling-title'
 			>
 				<Modal.Header closeButton>
-					<Modal.Title id='example-custom-modal-styling-title'>
+					<Modal.Title id='example-custom-modal-styling-title' className="crud-create-header display-4 my-1 margin-auto">
 						{props.name}
 					</Modal.Title>
 				</Modal.Header>
@@ -33,7 +33,7 @@ function DrinkModal(props) {
 				</Modal.Body>
 				<Modal.Footer>
 					<div className='row'>
-						<div className='col-md-12'>{props.details}</div>
+						<div className='col-md-12 d-flex justify-content-center'>{props.details}</div>
 					</div>
 				</Modal.Footer>
 			</Modal>

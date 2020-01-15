@@ -47,7 +47,7 @@ class MainNavbar extends Component {
 							{filteredData.map(item => (
 								<LinkContainer
 									to={`/categories/${item}`}
-									data={this.filteredData}
+									data={this.props.data}
 								>
 									<NavDropdown.Item>
 										{item}

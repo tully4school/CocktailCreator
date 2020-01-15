@@ -24,6 +24,7 @@ class Ingredients extends Component {
 			<div>
 				<ul>
 					{this.props.data.map(item => (
+
 						<li key={item.toString()}>{item + " "}</li>
 					))}
 				</ul>

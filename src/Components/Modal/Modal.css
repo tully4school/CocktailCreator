@@ -2,10 +2,19 @@
 	max-width: 70% !important;
 	max-height: 30vh !important;
 }
+.modal-header .close span{
+	color: #000 !important;
+	display: block;
+}
+.modal-content {
+	max-width: 50%;
+	min-width: 620px;
+	margin: 0 auto;
+}
 .modal-content,
 .modal-content .close {
 	background-color: #000;
-	color: #fff;
+	color: #000;
 }
 .modal-header,
 .modal-footer {
@@ -15,12 +24,15 @@
 .modal-footer .row {
 	width: 100%;
 }
-.fwUsed {
-	background-color: rgba(255, 255, 255, 1);
-	padding: 15px;
+.modal-footer {
+	font-size: 2rem;
+	font-weight: 500;
+}
+.modal-footer ul li li {
+	list-style: none;
 }
 .modal-body img {
-	width: 100%;
+	min-width: 430px ;
 }
 .modal-img {
 	box-shadow: 1px 7px 13px 3px gray;
@@ -29,6 +41,25 @@
 }
 .modal-img:active {
 	box-shadow: none;
+}
+@media only screen and (max-device-width: 920px) {
+	.modal-content{
+		min-width: 80vw !important;
+	}
+	.modal-body img {
+		min-width: 78vw !important;
+	}
+}
+@media only screen and (max-device-width: 768px) {
+	.crud-create-header {
+		font-size: 9vw !important;
+	}
+	.modal-footer {
+		font-size: 5vw;
+	}
+	.modal-footer ul {
+		padding-inline-start: 0px;
+	}
 }
 @media only screen and (max-device-width: 576px) {
 	.modal-content {
