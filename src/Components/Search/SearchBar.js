@@ -57,7 +57,7 @@ class Searchbar extends Component {
 						type='text'
 						value={drinkName}
 						name='searchBar'
-						className='searchbar'
+						className='searchbar px-3'
 						onChange={this.handleChange}
 					></input>
 					<button type='submit'>Search</button>
