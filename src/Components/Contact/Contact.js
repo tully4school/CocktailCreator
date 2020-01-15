@@ -53,7 +53,7 @@ class ContactForm extends Component {
 				</div>
 				<Form
 					onSubmit={this.handleSubmit.bind(this)}
-					className='m-2 m-md-5 px-md-5'
+					className='col-4 offset-4'
 				>
 					<FormGroup controlId='formBasicEmail'>
 						<Label className='text-muted'>Email address</Label>
