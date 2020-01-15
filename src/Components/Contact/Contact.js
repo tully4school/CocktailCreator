@@ -47,13 +47,13 @@ class ContactForm extends Component {
 		return (
 			<>
 				<div className='row'>
-					<div className='col-md-12'>
+					<div className='col-lg-12'>
 						<h1 className='crud-create-header display-4 mt-5 text-center'>Reach Out</h1>
 					</div>
 				</div>
 				<Form
 					onSubmit={this.handleSubmit.bind(this)}
-					className='col-4 offset-4'
+					className='col-12 col-md-4 offset-md-4'
 				>
 					<FormGroup controlId='formBasicEmail'>
 						<Label className='text-muted'>Email address</Label>
