@@ -13,7 +13,7 @@ class Home extends Component {
     render() {
         console.log(this.props.data);
         return (
-            <div>
+            <div className="container">
                 <div className='row'>
                     <div className='col-12 d-lg-none mt-5'>
                         <SearchBar />

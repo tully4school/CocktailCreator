@@ -16,7 +16,7 @@
 }
 .modal-content,
 .modal-content .close {
-	background: none;
+	background: white;
 }
 .modal-header,
 .modal-footer {
