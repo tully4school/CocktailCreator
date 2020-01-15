@@ -1,32 +1,42 @@
 import React, { Component } from "react";
-import axios from "../../../node_modules/axios";
+import axios from "axios";
 import "../DeleteDrink/DeleteDrink.css";
+import { Redirect } from "react-router-dom"
 class DeleteDrink extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			_id: ""
+			_id: props.match.params.id,
+			submitted: false
 		};
 	}
 	handleChange = e => {
 		this.setState({ [e.target.name]: e.target.value });
 	};
 	handleSubmit = e => {
+
 		e.preventDefault();
-		console.log(this.state);
-		axios
-			.delete(
-				`https://cocktail-recipes-tully4school.herokuapp.com/drinks/${this.state._id}`,
-				this.state
-			)
+		axios.delete(
+			`https://cocktail-recipes-tully4school.herokuapp.com/drinks/${this.state._id}`, { method: "DELETE" }
+		)
 			.then(res => {
-				console.log(res);
+				alert("Cocktail Deleted");
 			})
 			.then(err => {
-				console.log(err);
+				console.log("error", err);
 			});
+		this.setState({ submitted: true })
 	};
 	render() {
+		if (this.state.submitted) {
+			return (
+				<Redirect
+					to={{
+						pathname: "/",
+					}}
+				/>
+			);
+		}
 		const { _id } = this.state;
 		return (
 			<div className='container-fluid'>

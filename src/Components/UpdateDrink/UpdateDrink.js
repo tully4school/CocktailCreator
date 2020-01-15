@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Redirect } from "react-router-dom"
 import axios from "../../../node_modules/axios";
 import "./UpdateDrink.css";
 class UpdateDrink extends Component {
@@ -12,7 +13,8 @@ class UpdateDrink extends Component {
 			drinkGlass: "",
 			drinkIngredients: "",
 			drinkMeasures: "",
-			drinkThumb: ""
+			drinkThumb: "",
+			submitted: false
 		};
 	}
 	handleChange = e => {
@@ -27,11 +29,13 @@ class UpdateDrink extends Component {
 				this.state
 			)
 			.then(res => {
+				alert("Cocktail Updated! Thank You!")
 				console.log(res);
 			})
 			.then(err => {
 				console.log(err);
 			});
+		this.setState({ submitted: true })
 	};
 	render() {
 		const {
@@ -44,6 +48,15 @@ class UpdateDrink extends Component {
 			drinkMeasures,
 			drinkThumb
 		} = this.state;
+		if (this.state.submitted) {
+			return (
+				<Redirect
+					to={{
+						pathname: "/",
+					}}
+				/>
+			);
+		}
 		return (
 			<div className='container'>
 				<div className='row'>
